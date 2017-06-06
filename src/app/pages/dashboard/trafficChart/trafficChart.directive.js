@@ -1,19 +1,19 @@
 /**
- * @author v.lugovksy
- * created on 16.12.2015
+ * @author Doge dev-team
+ * created on 2016
  */
 (function () {
-  'use strict';
+    'use strict';
 
-  angular.module('BlurAdmin.pages.dashboard')
-      .directive('trafficChart', trafficChart);
+    angular.module('Doge.pages.dashboard')
+        .directive('trafficChart', trafficChart);
 
-  /** @ngInject */
-  function trafficChart() {
-    return {
-      restrict: 'E',
-      controller: 'TrafficChartCtrl',
-      templateUrl: 'app/pages/dashboard/trafficChart/trafficChart.html'
-    };
-  }
+    /** @ngInject */
+    function trafficChart() {
+        return {
+            restrict: 'E',
+            controller: 'TrafficChartCtrl',
+            templateUrl: 'app/pages/dashboard/trafficChart/trafficChart.html'
+        };
+    }
 })();

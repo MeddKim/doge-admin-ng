@@ -1,3 +1,19 @@
+
+.modal-content {
+  border-radius: 5px;
+  border: none;
+  color: $dropdown-text;
+}
+
+.modal-header {
+  color: $label-text;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  .modal-title {
+    color: $dropdown-text;
+  }
+}
+
 .modal-buttons {
   margin-top: -12px;
   margin-right: -22px;
@@ -14,25 +30,27 @@
   }
 }
 
+$modal-input-border: #e7e7e7;
+
 .modal {
   text-align: center;
   .modal-dialog {
     display: inline-block;
     text-align: left;
     margin: 0 auto;
-    .form-control{
+    .form-control {
       color: $github-color;
       background-color: transparent;
-      border: 1px solid $input-border;
-      @include placeholderStyle($default-text, 0.9);
+      border: 1px solid $modal-input-border;
+      @include placeholderStyle($dropdown-text, 0.9);
     }
-    .modal-body p, .modal-body div, .modal-body span{
-      color: $default-text;
+    .modal-body p, .modal-body div, .modal-body span {
+      color: $dropdown-text;
     }
   }
   .modal-header {
     border: none;
-    .close{
+    .close {
       margin-top: -5px;
     }
   }
@@ -40,29 +58,49 @@
     border: none;
     padding-top: 0;
   }
-  .modal-icon{
+  .modal-icon {
     margin-right: 3px;
   }
   .sn-link-close {
-    color: #949494;
+    color: $dropdown-text;
     font-size: 30px;
     &:hover {
       color: $danger;
     }
   }
+
+}
+
+.side-modal {
+  .modal-dialog {
+    width: 50%;
+    height: 100%;
+    margin-left: 100%;
+    .modal-content {
+      min-height: 100%;
+      border-radius: 5px 0 0 5px;
+    }
+  }
+
+}
+
+.side-modal.fade .modal-dialog {
+  transform: translate(0, 0);
+}
+
+.side-modal.in {
+  .modal-dialog {
+    transform: translate(-100%, 0);
+  }
 }
 
 @media screen and (min-width: $resM) {
   .modal:before {
-    display: inline-block;
-    vertical-align: middle;
+    //display: inline-block;
+    //vertical-align: middle;
     content: " ";
-    height: 100%;
+    height: 0;
   }
-}
-
-.modal-content .modal-header .modal-title{
-  color: $default-text;
 }
 
 .message-modal {
@@ -87,24 +125,4 @@
     margin: 24px 0 12px;
     text-align: center;
   }
-}
-
-@mixin message-modal-color($color) {
-  .modal-header {
-    color: #ffffff;
-    background: $color;
-  }
-}
-
-.success-modal {
-  @include message-modal-color($success);
-}
-.info-modal {
-  @include message-modal-color($info);
-}
-.warning-modal {
-  @include message-modal-color($warning);
-}
-.danger-modal {
-  @include message-modal-color($danger);
 }

@@ -5,7 +5,7 @@
 (function () {
   'use strict';
 
-  angular.module('BlurAdmin.theme')
+  angular.module('Doge.theme')
     .service('preloader', preloader);
 
   /** @ngInject */
@@ -20,13 +20,13 @@
         };
         return d.promise;
       },
-      loadAmCharts : function(){
-        var d = $q.defer();
-        AmCharts.ready(function(){
-          d.resolve();
-        });
-        return d.promise;
-      }
+      // loadAmCharts : function(){
+      //   var d = $q.defer();
+      //   AmCharts.ready(function(){
+      //     d.resolve();
+      //   });
+      //   return d.promise;
+      // }
     }
   }
 

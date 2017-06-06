@@ -1,25 +1,25 @@
 /**
- * @author v.lugovsky
- * created on 23.12.2015
+ * @author Doge dev-team
+ * created on 2016
  */
 (function () {
-  'use strict';
+    'use strict';
 
-  angular.module('BlurAdmin.pages.ui.panels', [])
-      .config(routeConfig);
+    angular.module('Doge.pages.ui.panels', [])
+        .config(routeConfig);
 
-  /** @ngInject */
-  function routeConfig($stateProvider) {
-    $stateProvider
-        .state('ui.panels', {
-          url: '/panels',
-          templateUrl: 'app/pages/ui/panels/panels.html',
-          controller: 'NotificationsPageCtrl',
-          title: 'Panels',
-          sidebarMeta: {
-            order: 1100,
-          },
-        });
-  }
+    /** @ngInject */
+    function routeConfig($stateProvider) {
+        $stateProvider
+            .state('ui.panels', {
+                url: '/panels',
+                templateUrl: 'app/pages/ui/panels/panels.html',
+                controller: 'NotificationsPageCtrl',
+                title: 'Panels',
+                sidebarMeta: {
+                    order: 1100,
+                },
+            });
+    }
 
 })();

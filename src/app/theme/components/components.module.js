@@ -1,14 +1,11 @@
 /**
- * @author v.lugovksy
- * created on 16.12.2015
+ * @author Doge dev-team
+ * created on 2016
  */
-/**
- * @author v.lugovsky
- * created on 16.12.2015
- */
-(function () {
-  'use strict';
 
-  angular.module('BlurAdmin.theme.components', []);
+(function () {
+    'use strict';
+
+    angular.module('Doge.theme.components', []);
 
 })();

@@ -1,56 +1,61 @@
 /**
- * @author v.lugovsky
- * created on 15.12.2015
+ * @author Doge dev-team
+ * created on 2016
  */
 (function () {
-  'use strict';
+    'use strict';
 
-  var IMAGES_ROOT = 'assets/img/';
+    var IMAGES_ROOT = 'assets/img/';
 
-  angular.module('BlurAdmin.theme')
-    .constant('layoutColors', {
-      primary: '#209e91',
-      info: '#2dacd1',
-      success: '#90b900',
-      warning: '#dfb81c',
-      danger: '#e85656',
-      default: '#ffffff',
-      successLight: '#85BA54',
-      primaryLight: '#5FBCBB',
-      warningLight: '#c5d36a',
+    angular.module('Doge.theme')
+        .constant('layoutSizes', {
+            resWidthCollapseSidebar: 1200,
+            resWidthHideSidebar: 500
+        })
+        .constant('layoutPaths', {
+            images: {
+                root: IMAGES_ROOT,
+                profile: IMAGES_ROOT + 'app/profile/',
+                amMap: 'assets/img/theme/vendor/ammap//dist/ammap/images/',
+                amChart: 'assets/img/theme/vendor/amcharts/dist/amcharts/images/'
+            }
+        })
+        .constant('colorHelper', {
+            tint: function (color, weight) {
+                return mix('#ffffff', color, weight);
+            },
+            shade: function (color, weight) {
+                return mix('#000000', color, weight);
+            },
+        });
 
-      primaryDark: '#17857a',
-      dangerDark: '#c24848',
-      successDark: '#7b9e00',
-      warningDark: '#c6a315',
-      infoDark: '#258ead',
+    function shade(color, weight) {
+        return mix('#000000', color, weight);
+    }
 
-      primaryBg: '#63cec3',
-      infoBg: '#5abfdd',
-      successBg: '#b5d448',
-      warningBg: '#e8ca52',
-      dangerBg: '#f67171',
+    function tint(color, weight) {
+        return mix('#ffffff', color, weight);
+    }
 
-      primaryCharts: '#005562',
-      successCharts: '#6eba8c',
-      infoCharts: '#0e8174',
-      warningCharts: '#b9f2a1',
-      dangerCharts: '#ffa76d',
-      defaultCharts: '#ffffff',
+    //SASS mix function
+    function mix(color1, color2, weight) {
+        // convert a decimal value to hex
+        function d2h(d) {
+            return d.toString(16);
+        }
 
-      defaultText: '#ffffff'
-    })
-    .constant('layoutSizes', {
-      resWidthCollapseSidebar: 1200,
-      resWidthHideSidebar: 500
-    })
-    .constant('layoutPaths', {
-      images: {
-        root: IMAGES_ROOT,
-        profile: IMAGES_ROOT + 'app/profile/',
-        amMap: 'assets/img/theme/vendor/ammap//dist/ammap/images/',
-        amChart: 'assets/img/theme/vendor/amcharts/dist/amcharts/images/'
-      }
-    });
+        // convert a hex value to decimal
+        function h2d(h) {
+            return parseInt(h, 16);
+        }
 
+        var result = "#";
+        for (var i = 1; i < 7; i += 2) {
+            var color1Part = h2d(color1.substr(i, 2));
+            var color2Part = h2d(color2.substr(i, 2));
+            var resultPart = d2h(Math.floor(color2Part + (color1Part - color2Part) * (weight / 100.0)));
+            result += ('0' + resultPart).slice(-2);
+        }
+        return result;
+    }
 })();

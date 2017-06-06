@@ -3,6 +3,27 @@
   position: relative;
 }
 
+.channels-block.transparent {
+  .traffic-chart canvas{
+    border: 10px solid rgba(0,0,0,0.35);
+    box-shadow: 0 0 5px 0 rgb(0, 0, 0) inset;
+    border-radius: 150px;
+  }
+  .chart-bg {
+    background-color: rgba(0,0,0,0.35);
+  }
+}
+
+.chart-bg {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  left: 60px;
+  top: 60px;
+  border-radius: 100px;
+  background-color: transparent;
+}
+
 .channels-info {
   display: inline-block;
   width: calc(100% - 370px);
@@ -67,10 +88,6 @@
   height: 300px;
   position: relative;
   float: left;
-  //canvas{
-  //  border: 10px solid rgba(0, 0, 0, 0.34902);
-  //  border-radius: 180px;
-  //}
 }
 
 .traffic-text {
@@ -83,7 +100,6 @@
   line-height: 24px;
   text-align: center;
   font-size: 18px;
-  //color: $danger;
   span {
     display: block;
     font-size: 18px;
@@ -101,10 +117,12 @@
   border-radius: 0;
   width: 100%;
   margin-bottom: 0;
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: $progress-background;
+  box-shadow: none;
   .progress-bar{
     height: 4px;
-    background-color: white;
+    background-color: $progress-default;
+    box-shadow: none;
   }
 }
 
@@ -116,80 +134,6 @@
   top: 27px;
   border-radius: 15px;
   left: -45px;
-  &.info{
-    background-color: $info-charts;
-  }
-  &.success{
-    background-color: $success-charts;
-  }
-  &.danger{
-    background-color: $danger-charts;
-  }
-  &.default{
-    background-color: $default;
-  }
-  &.warning{
-    background-color: $warning-charts;
-  }
-  &.primary{
-    background-color: $primary-charts;
-  }
-}
-
-//@mixin doughnut-size($size) {
-//  .traffic-chart .canvas-holder {
-//    width: $size;
-//    height: $size;
-//    canvas {
-//      width: $size;
-//      height: $size;
-//    }
-//  }
-//}
-
-//@media (max-width: $resS) {
-//  @include doughnut-size(250px);
-//  .canvas-holder {
-//    float: none;
-//  }
-//  .traffic-legend {
-//    display: block;
-//    padding: 10px 0 0;
-//    width: 300px;
-//  }
-//  ul.doughnut-legend {
-//    padding-left: 20px;
-//    li {
-//      &:nth-child(2n-1) {
-//        float: left;
-//      }
-//    }
-//  }
-//  .traffic-chart{
-//    width: 100%;
-//  }
-//  .canvas-holder{
-//    display: block;
-//    margin: 0 auto;
-//  }
-//  .panel.medium-panel.traffic-panel{
-//    height: inherit;
-//  }
-//}
-
-.traffic-chart canvas{
-  border: 10px solid rgba(0,0,0,0.0);
-  border-radius: 150px;
-}
-
-.chart-bg{
-  background-color: $view-total;
-  position: absolute;
-  border-radius: 100px;
-  width: 180px;
-  height: 180px;
-  left: 60px;
-  top: 60px;
 }
 
 @media (max-width: $resM) {
@@ -226,18 +170,14 @@
   }
 }
 
-
 @media (max-width: 380px){
-
   .traffic-chart{
     width: 240px;
   }
-
   .canvas-holder{
     width: 240px;
     height: 240px;
   }
-
   .chart-bg {
     top: 30px;
   }
@@ -248,14 +188,5 @@
     top: 50px;
     width: 142px;
     height: 142px;
-  }
-}
-
-
-body.badmin-transparent{
-  .traffic-chart canvas{
-    border: 10px solid rgba(0,0,0,0.35);
-    box-shadow: 0 0 5px 0 rgb(0, 0, 0) inset;
-    border-radius: 150px;
   }
 }

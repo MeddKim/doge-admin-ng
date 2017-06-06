@@ -1,28 +1,28 @@
 /**
- * @author a.demeshko
- * created on 18.01.2016
+ * @author Doge dev-team
+ * created on 2016
  */
 (function () {
-  'use strict';
+    'use strict';
 
-  angular.module('BlurAdmin.pages.ui.notifications')
-    .controller('ModalsPageCtrl', ModalsPageCtrl);
+    angular.module('Doge.pages.ui.notifications')
+        .controller('ModalsPageCtrl', ModalsPageCtrl);
 
-  /** @ngInject */
-  function ModalsPageCtrl($scope, $uibModal) {
-    $scope.open = function (page, size) {
-      $uibModal.open({
-        animation: true,
-        templateUrl: page,
-        size: size,
-        resolve: {
-          items: function () {
-            return $scope.items;
-          }
-        }
-      });
-    };
-  }
+    /** @ngInject */
+    function ModalsPageCtrl($scope, $uibModal) {
+        $scope.open = function (page, size) {
+            $uibModal.open({
+                animation: true,
+                templateUrl: page,
+                size: size,
+                resolve: {
+                    items: function () {
+                        return $scope.items;
+                    }
+                }
+            });
+        };
+    }
 
 
 })();

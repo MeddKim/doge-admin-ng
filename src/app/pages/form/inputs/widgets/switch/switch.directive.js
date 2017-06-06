@@ -1,31 +1,38 @@
 /**
- * @author v.lugovksy
- * created on 16.12.2015
+ * @author Doge dev-team
+ * created on 2016
  */
 (function () {
-  'use strict';
+    'use strict';
 
-  angular.module('BlurAdmin.pages.form')
-      .directive('switch', switchDirective);
+    angular.module('Doge.pages.form')
+        .directive('switch', switchDirective);
 
-  /** @ngInject */
-  function switchDirective($timeout) {
-    return {
-      restrict: 'EA',
-      replace: true,
-      scope: {
-        ngModel: '='
-      },
-      template: '<div class="switch-container {{color}}"><input type="checkbox" ng-model="ngModel"></div>',
-      link: function (scope, elem, attr) {
-        $timeout(function(){
-          scope.color = attr.color;
-          $(elem).find('input').bootstrapSwitch({
-            size: 'small',
-            onColor: attr.color
-          });
-        });
-      }
-    };
-  }
+    /** @ngInject */
+    function switchDirective($timeout) {
+        return {
+            restrict: 'EA',
+            replace: true,
+            scope: {
+                ngModel: '='
+            },
+            template: function (el, attrs) {
+                return '<div class="switch-container ' + (attrs.color || '') + '"><input type="checkbox" ng-model="ngModel"></div>';
+            },
+            link: function (scope, elem, attr) {
+                $timeout(function () {
+                    var input = $(elem).find('input');
+                    input.bootstrapSwitch({
+                        size: 'small',
+                        onColor: attr.color
+                    });
+                    input.on('switchChange.bootstrapSwitch', function (event, state) {
+                        scope.ngModel = state;
+                        scope.$apply();
+                    });
+
+                });
+            }
+        };
+    }
 })();

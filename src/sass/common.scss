@@ -1,2 +1,30 @@
 @import 'theme/conf/mixins';
+@import 'theme/conf/colorScheme/mint';
 @import 'theme/conf/variables';
+
+.checkbox-table {
+  th {
+    font-weight: bold;
+  }
+  .checkbox {
+    margin: 0;
+  }
+  label.custom-checkbox {
+    span {
+      vertical-align: middle;
+    }
+  }
+  label.custom-radio {
+    span {
+      vertical-align: middle;
+    }
+  }
+}
+
+.table-striped.checkbox-table {
+  tbody {
+    tr:nth-of-type(odd) {
+      background-color: rgba(153, 153, 153, .1);
+    }
+  }
+}

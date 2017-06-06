@@ -16,7 +16,7 @@ h3.with-line {
 }
 
 .profile-block {
-  background: #fff;
+  background: $default;
 
   .nav-tabs > li {
     & > a {
@@ -86,7 +86,7 @@ h3.with-line {
     display: none;
     position: absolute;
     font-size: 32px;
-    background: #ffffff;
+    background: $default;
     cursor: pointer;
     color: $primary;
     top: -11px;
@@ -105,7 +105,7 @@ h3.with-line {
     width: 202px;
     background: rgba(0, 0, 0, 0.7);
     transition: all 200ms ease-in-out;
-    color: #ffffff;
+    color: $default-text;
     text-decoration: none;
     position: absolute;
     bottom: -1px;
@@ -133,9 +133,9 @@ a.sn-link {
   transition: none;
   display: block;
   border-radius: 5px;
-  background-color: rgba(0, 0, 0, .15);
+  background-color: transparent;
   padding: $snPadding;
-  color: $default;
+  color: $default-text;
   border: 1px solid transparent;
   margin-bottom: 23px;
   width: 100%;
@@ -149,7 +149,7 @@ a.sn-link {
     font-size: 17px;
     margin-right: 8px;
     background-color: rgba(0,0,0,.15);
-    color: #fff;
+    color: $default-text;
   }
   span {
 
@@ -165,7 +165,7 @@ a.sn-link {
     border-width: 2px;
     padding: $snPadding - 1;
     span {
-      color: $default;
+      color: $default-text;
     }
     i {
       background: $snColor;

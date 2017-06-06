@@ -1,4 +1,5 @@
 .alert{
+  color: $label-text;
   font-size: 13px;
   font-weight: $font-light;
   strong{
@@ -26,17 +27,19 @@
 
 .bg-success {
   background-color: rgba($success,0.85);
+  color: $label-text;
   a{
-    color: $primary-charts;
+    color: $danger-dark;
     &:hover{
-      color: $primary-dark;
+      color: $danger;
     }
   }
 }
 .bg-info {
   background-color: rgba($info,0.85);
+  color: $label-text;
   a{
-    color: $warning-bg;
+    color: $warning-light;
     &:hover{
       color: $warning;
     }
@@ -44,19 +47,21 @@
 }
 .bg-warning {
   background-color: rgba($warning,0.85);
+  color: $label-text;
   a{
-    color: $danger;
+    color: $danger-dark;
     &:hover{
-      color: $danger-dark;
+      color: $danger;
     }
   }
 }
 .bg-danger {
   background-color: rgba($danger,0.85);
+  color: $label-text;
   a{
-    color: $primary-light;
+    color: $warning-light;
     &:hover{
-      color: $primary;
+      color: $warning;
     }
   }
 }

@@ -1,24 +1,24 @@
 /**
- * @author v.lugovksy
- * created on 16.12.2015
+ * @author Doge dev-team
+ * created on 2016
  */
 (function () {
-  'use strict';
+    'use strict';
 
-  angular.module('BlurAdmin.theme.components')
-      .directive('contentTop', contentTop);
+    angular.module('Doge.theme.components')
+        .directive('contentTop', contentTop);
 
-  /** @ngInject */
-  function contentTop($location, $state) {
-    return {
-      restrict: 'E',
-      templateUrl: 'app/theme/components/contentTop/contentTop.html',
-      link: function($scope) {
-        $scope.$watch(function () {
-          $scope.activePageTitle = $state.current.title;
-        });
-      }
-    };
-  }
+    /** @ngInject */
+    function contentTop($location, $state) {
+        return {
+            restrict: 'E',
+            templateUrl: 'app/theme/components/contentTop/contentTop.html',
+            link: function ($scope) {
+                $scope.$watch(function () {
+                    $scope.activePageTitle = $state.current.title;
+                });
+            }
+        };
+    }
 
 })();

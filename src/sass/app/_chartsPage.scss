@@ -33,7 +33,7 @@
 .amChartsButtonSelected {
   background-color: #CC0000;
   border: 1px solid #CC0000;
-  color: #FFFFFF;
+  color: $default-text;
   -moz-border-radius: 5px;
   border-radius: 5px;
   margin: 1px;
@@ -45,6 +45,16 @@
   color: #000000;
   border-radius: 5px;
   margin: 1px;
+}
+
+.ct-area {
+  fill-opacity: .5;
+}
+
+.ct-label{
+  color: $default-text;
+  opacity: 0.9;
+  fill: $default-text;
 }
 
 .ct-chart .ct-label{
@@ -102,16 +112,6 @@
   }
 }
 
-body.badmin-transparent{
-  .ct-area {
-    fill-opacity: .5;
-  }
-  .ct-label{
-    color: $default;
-    opacity: 0.9;
-    fill: rgba(255,255,255,.9);
-  }
-}
 @media screen and (min-width: 992px) {
   .row.morris-up {
     > div {
@@ -158,4 +158,8 @@ body.badmin-transparent{
 
 .amcharts-cursor-fill {
   filter: url(#shadow);
+}
+
+.chartist h5 {
+  font-weight: $font-normal;
 }

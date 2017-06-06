@@ -1,24 +1,24 @@
 /**
- * @author v.lugovsky
- * created on 16.12.2015
+ * @author Doge dev-team
+ * created on 2016
  */
 (function () {
-  'use strict';
+    'use strict';
 
-  angular.module('BlurAdmin.pages.ui.typography', [])
-      .config(routeConfig);
+    angular.module('Doge.pages.ui.typography', [])
+        .config(routeConfig);
 
-  /** @ngInject */
-  function routeConfig($stateProvider) {
-    $stateProvider
-        .state('ui.typography', {
-          url: '/typography',
-          templateUrl: 'app/pages/ui/typography/typography.html',
-          title: 'Typography',
-          sidebarMeta: {
-            order: 0,
-          },
-        });
-  }
+    /** @ngInject */
+    function routeConfig($stateProvider) {
+        $stateProvider
+            .state('ui.typography', {
+                url: '/typography',
+                templateUrl: 'app/pages/ui/typography/typography.html',
+                title: 'Typography',
+                sidebarMeta: {
+                    order: 0,
+                },
+            });
+    }
 
 })();

@@ -1,18 +1,18 @@
 /**
- * @author a.demeshko
- * created on 28.12.2015
+ * @author Doge dev-team
+ * created on 2016
  */
 (function () {
-  'use strict';
+    'use strict';
 
-  angular.module('BlurAdmin.pages.components.mail')
-    .controller('MailListCtrl', MailListCtrl);
+    angular.module('Doge.pages.components.mail')
+        .controller('MailListCtrl', MailListCtrl);
 
-  /** @ngInject */
-  function MailListCtrl($stateParams,  mailMessages) {
-    var vm = this;
-    vm.messages = mailMessages.getMessagesByLabel($stateParams.label);
-    vm.label = $stateParams.label;
-  }
+    /** @ngInject */
+    function MailListCtrl($stateParams, mailMessages) {
+        var vm = this;
+        vm.messages = mailMessages.getMessagesByLabel($stateParams.label);
+        vm.label = $stateParams.label;
+    }
 
 })();

@@ -1,21 +1,21 @@
 /**
- * @author v.lugovsky
- * created on 16.12.2015
+ * @author Doge dev-team
+ * created on 2016
  */
 (function () {
-  'use strict';
+    'use strict';
 
-  angular.module('BlurAdmin.theme')
-      .directive('includeWithScope', includeWithScope);
+    angular.module('Doge.theme')
+        .directive('includeWithScope', includeWithScope);
 
-  /** @ngInject */
-  function includeWithScope() {
-    return {
-      restrict: 'AE',
-      templateUrl: function(ele, attrs) {
-        return attrs.includeWithScope;
-      }
-    };
-  }
+    /** @ngInject */
+    function includeWithScope() {
+        return {
+            restrict: 'AE',
+            templateUrl: function (ele, attrs) {
+                return attrs.includeWithScope;
+            }
+        };
+    }
 
 })();

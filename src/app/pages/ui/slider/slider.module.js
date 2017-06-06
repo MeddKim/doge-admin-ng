@@ -1,24 +1,24 @@
 /**
- * @author a.demeshko
- * created on 12/22/15
+ * @author Doge dev-team
+ * created on 2016
  */
 (function () {
-  'use strict';
+    'use strict';
 
-  angular.module('BlurAdmin.pages.ui.slider', [])
-    .config(routeConfig);
+    angular.module('Doge.pages.ui.slider', [])
+        .config(routeConfig);
 
-  /** @ngInject */
-  function routeConfig($stateProvider) {
-    $stateProvider
-        .state('ui.slider', {
-          url: '/slider',
-          templateUrl: 'app/pages/ui/slider/slider.html',
-          title: 'Sliders',
-          sidebarMeta: {
-            order: 1000,
-          },
-        });
-  }
+    /** @ngInject */
+    function routeConfig($stateProvider) {
+        $stateProvider
+            .state('ui.slider', {
+                url: '/slider',
+                templateUrl: 'app/pages/ui/slider/slider.html',
+                title: 'Sliders',
+                sidebarMeta: {
+                    order: 1000,
+                },
+            });
+    }
 
 })();

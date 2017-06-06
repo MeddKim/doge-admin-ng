@@ -1,30 +1,30 @@
 /**
- * @author k.danovsky
- * created on 15.01.2016
+ * @author Doge dev-team
+ * created on 2016
  */
 (function () {
-  'use strict';
+    'use strict';
 
-  angular.module('BlurAdmin.pages.components', [
-    'BlurAdmin.pages.components.mail',
-    'BlurAdmin.pages.components.timeline',
-    'BlurAdmin.pages.components.tree',
-  ])
-      .config(routeConfig);
+    angular.module('Doge.pages.components', [
+        'Doge.pages.components.mail',
+        'Doge.pages.components.timeline',
+        'Doge.pages.components.tree',
+    ])
+        .config(routeConfig);
 
-  /** @ngInject */
-  function routeConfig($stateProvider) {
-    $stateProvider
-        .state('components', {
-          url: '/components',
-          template : '<ui-view></ui-view>',
-          abstract: true,
-          title: 'Components',
-          sidebarMeta: {
-            icon: 'ion-gear-a',
-            order: 100,
-          },
-        });
-  }
+    /** @ngInject */
+    function routeConfig($stateProvider) {
+        $stateProvider
+            .state('components', {
+                url: '/components',
+                template: '<ui-view></ui-view>',
+                abstract: true,
+                title: 'Components',
+                sidebarMeta: {
+                    icon: 'ion-gear-a',
+                    order: 100,
+                },
+            });
+    }
 
 })();

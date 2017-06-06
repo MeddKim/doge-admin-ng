@@ -1,0 +1,63 @@
+<div class="widgets">
+    <div class="row">
+        <div class="col-md-12">
+            <div ba-panel ba-panel-class="with-scroll">
+                <div class="operate-container">
+                    <button type="button" class="btn btn-with-icon"
+                            ng-click="open('app/pages/client/customer/modal.html','side-modal','')"><i
+                            class="ion-plus-round"></i>新增
+                    </button>
+                    <button type="button" class="btn btn-with-icon"><i class="ion-minus-round"></i>删除</button>
+                    <button type="button" class="btn btn-with-icon"><i class="ion-android-download"></i>导入</button>
+                    <button type="button" class="btn btn-with-icon"><i class="ion-android-upload"></i>导出</button>
+                    <button type="button" class="btn btn-with-icon"><i class="ion-arrow-return-left"></i>返回公海</button>
+                    <button type="button" class="btn btn-with-icon"><i class="ion-plus-circled"></i>创建项目</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div ba-panel ba-panel-class="with-scroll">
+                <div class="horizontal-scroll">
+                    <div class="form-group select-page-size-wrap ">
+                        <label>每页
+                            <select class="form-control selectpicker show-tick" title="页数" selectpicker
+                                    ng-model="smartTablePageSize" ng-options="i for i in [5,10,15,20,25]">
+                            </select>
+                        </label>
+                    </div>
+                    <table st-table="rowCollection" class="table table-striped checkbox-table">
+                        <thead>
+                        <tr>
+                            <th>
+                                <div class="checkbox">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox">
+                                        <span></span>
+                                    </label>
+                                </div>
+                            </th>
+                            <th st-sort="firstName">first name</th>
+                            <th st-sort="lastName">last name</th>
+                            <th st-sort="birthDate">birth date</th>
+                            <th st-sort="balance">balance</th>
+                            <th>email</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="row in rowCollection">
+                            <td cb-select="row"></td>
+                            <td>{{row.firstName | uppercase}}</td>
+                            <td>{{row.lastName}}</td>
+                            <td>{{row.birthDate | date}}</td>
+                            <td>{{row.balance | currency}}</td>
+                            <td><a ng-href="mailto:{{row.email}}">email</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

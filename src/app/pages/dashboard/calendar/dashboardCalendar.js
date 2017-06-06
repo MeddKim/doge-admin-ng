@@ -1,15 +1,15 @@
 /**
- * @author v.lugovksy
- * created on 16.12.2015
+ * @author Doge dev-team
+ * created on 2016
  */
 (function () {
-  'use strict';
+    'use strict';
 
-  angular.module('BlurAdmin.pages.dashboard')
-      .service('dashboardCalendar', dashboardCalendar);
+    angular.module('Doge.pages.dashboard')
+        .service('dashboardCalendar', dashboardCalendar);
 
-  /** @ngInject */
-  function dashboardCalendar() {
+    /** @ngInject */
+    function dashboardCalendar() {
 
-  }
+    }
 })();

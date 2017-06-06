@@ -1,18 +1,18 @@
 /**
- * @author v.lugovsky
- * created on 17.12.2015
+ * @author Doge dev-team
+ * created on 2016
  */
 (function () {
-  'use strict';
+    'use strict';
 
-  angular.module('BlurAdmin.theme')
-      .filter('kameleonImg', kameleonImg);
+    angular.module('Doge.theme')
+        .filter('kameleonImg', kameleonImg);
 
-  /** @ngInject */
-  function kameleonImg(layoutPaths) {
-    return function(input) {
-      return layoutPaths.images.root + 'theme/icon/kameleon/' + input + '.svg';
-    };
-  }
+    /** @ngInject */
+    function kameleonImg(layoutPaths) {
+        return function (input) {
+            return layoutPaths.images.root + 'theme/icon/kameleon/' + input + '.svg';
+        };
+    }
 
 })();

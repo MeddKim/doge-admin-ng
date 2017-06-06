@@ -1,19 +1,19 @@
 /**
- * @author v.lugovsky
- * created on 17.12.2015
+ * @author Doge dev-team
+ * created on 2016
  */
 (function () {
-  'use strict';
+    'use strict';
 
-  angular.module('BlurAdmin.theme')
-      .filter('profilePicture', profilePicture);
+    angular.module('Doge.theme')
+        .filter('profilePicture', profilePicture);
 
-  /** @ngInject */
-  function profilePicture(layoutPaths) {
-    return function(input, ext) {
-      ext = ext || 'png';
-      return layoutPaths.images.profile + input + '.' + ext;
-    };
-  }
+    /** @ngInject */
+    function profilePicture(layoutPaths) {
+        return function (input, ext) {
+            ext = ext || 'png';
+            return layoutPaths.images.profile + input + '.' + ext;
+        };
+    }
 
 })();

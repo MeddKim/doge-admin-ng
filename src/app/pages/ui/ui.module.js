@@ -1,38 +1,38 @@
 /**
- * @author k.danovsky
- * created on 12.01.2016
+ * @author Doge dev-team
+ * created on 2016
  */
 (function () {
-  'use strict';
+    'use strict';
 
-  angular.module('BlurAdmin.pages.ui', [
-    'BlurAdmin.pages.ui.typography',
-    'BlurAdmin.pages.ui.buttons',
-    'BlurAdmin.pages.ui.icons',
-    'BlurAdmin.pages.ui.modals',
-    'BlurAdmin.pages.ui.grid',
-    'BlurAdmin.pages.ui.alerts',
-    'BlurAdmin.pages.ui.progressBars',
-    'BlurAdmin.pages.ui.notifications',
-    'BlurAdmin.pages.ui.tabs',
-    'BlurAdmin.pages.ui.slider',
-    'BlurAdmin.pages.ui.panels',
-  ])
-      .config(routeConfig);
+    angular.module('Doge.pages.ui', [
+        'Doge.pages.ui.typography',
+        'Doge.pages.ui.buttons',
+        'Doge.pages.ui.icons',
+        'Doge.pages.ui.modals',
+        'Doge.pages.ui.grid',
+        'Doge.pages.ui.alerts',
+        'Doge.pages.ui.progressBars',
+        'Doge.pages.ui.notifications',
+        'Doge.pages.ui.tabs',
+        'Doge.pages.ui.slider',
+        'Doge.pages.ui.panels',
+    ])
+        .config(routeConfig);
 
-  /** @ngInject */
-  function routeConfig($stateProvider) {
-    $stateProvider
-        .state('ui', {
-          url: '/ui',
-          template : '<ui-view></ui-view>',
-          abstract: true,
-          title: 'UI Features',
-          sidebarMeta: {
-            icon: 'ion-android-laptop',
-            order: 200,
-          },
-        });
-  }
+    /** @ngInject */
+    function routeConfig($stateProvider) {
+        $stateProvider
+            .state('ui', {
+                url: '/ui',
+                template: '<ui-view></ui-view>',
+                abstract: true,
+                title: 'UI Features',
+                sidebarMeta: {
+                    icon: 'ion-android-laptop',
+                    order: 200,
+                },
+            });
+    }
 
 })();

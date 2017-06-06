@@ -55,7 +55,7 @@ div.blurCalendar{
   }
 
   th, td {
-    border: 1px solid;
+    border: 1px solid rgba(255,255,255,0.3);
     padding: 0;
     vertical-align: top;
   }
@@ -94,11 +94,11 @@ div.blurCalendar{
 
 .fc-unthemed {
   th, td, hr, thead, tbody, .fc-row, .fc-popover {
-    border-color: $border;
+    border-color: rgba($border, 0.3);
   }
 
   .fc-popover {
-    background-color: #ffffff;
+    background-color: $default;
     border: 1px solid;
 
     .fc-header {
@@ -330,7 +330,7 @@ div.blurCalendar{
 .fc-event,
 .fc-event:hover,
 .ui-widget .fc-event {
-  color: #ffffff;
+  color: $label-text;
   text-decoration: none;
 }
 
@@ -663,7 +663,7 @@ a.fc-more {
 
   .fc-bg {
     z-index: 1;
-    background: #fff;
+    background: $default;
     opacity: .25;
     filter: alpha(opacity=25);
   }
@@ -720,51 +720,45 @@ a.fc-more {
 .fc-day-grid-container.fc-scroller  {
   height: auto!important;
 }
-body.badmin-transparent{
 
-  .calendar-panel.panel .panel-body{
-    padding: 0;
-  }
+.calendar-panel.panel .panel-body{
+  padding: 0;
+}
 
-  .fc-body > tr > .fc-widget-content{
-    border: none;
-  }
+.fc-body > tr > .fc-widget-content{
+  border: none;
+}
 
-  .fc-head{
-    color: $default;
-    background-color: $primary;
-    td, th{
-      border:none;
-    }
-    div.fc-widget-header{
-      padding: 5px 0;
-    }
+.fc-head{
+  color: $label-text;
+  background-color: $primary;
+  td, th{
+    border:none;
   }
+  div.fc-widget-header{
+    padding: 5px 0;
+  }
+}
 
-  .fc td{
-    border-color: rgba(255,255,255,0.1);
-  }
-
-  .fc-today-button, .fc-month-button, .fc-agendaWeek-button, .fc-agendaDay-button  {
-    display: none;
-  }
-  .blurCalendar{
-    margin-top: 15px;
-  }
-  .fc-prev-button, .fc-next-button{
-    position: absolute;
-    background: transparent;
-    box-shadow: none;
-    border: none;
-    color: $default;
-  }
-  .fc-next-button {
-    left: 30px;
-  }
-  .fc-prev-button {
-  }
-  .fc-day-number{
-    color: $default;
-    opacity: 0.9;
-  }
+.fc-today-button, .fc-month-button, .fc-agendaWeek-button, .fc-agendaDay-button  {
+  display: none;
+}
+.blurCalendar{
+  margin-top: 15px;
+}
+.fc-prev-button, .fc-next-button{
+  position: absolute;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  color: $default-text;
+}
+.fc-next-button {
+  left: 30px;
+}
+.fc-prev-button {
+}
+.fc-day-number{
+  color: $default-text;
+  opacity: 0.9;
 }

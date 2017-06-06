@@ -1,17 +1,12 @@
 /**
- * @author v.lugovsky
- * created on 15.12.2015
+ * @author Doge
+ * created on 2016
  */
 (function () {
-  'use strict';
+    'use strict';
 
-  angular.module('BlurAdmin.theme', [
-      'toastr',
-      'chart.js',
-      'angular-chartist',
-      'angular.morris-chart',
-      'textAngular',
-      'BlurAdmin.theme.components'
-  ]);
-
+    angular.module('Doge.theme', [
+        'toastr',
+        'Doge.theme.components'
+    ]);
 })();

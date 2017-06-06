@@ -1,18 +1,18 @@
 /**
- * @author a.demeshko
- * created on 24/12/15
+ * @author Doge dev-team
+ * created on 2016
  */
 (function () {
-  'use strict';
+    'use strict';
 
-  angular.module('BlurAdmin.pages.components.mail')
-    .controller('composeBoxCtrl', composeBoxCtrl);
+    angular.module('Doge.pages.components.mail')
+        .controller('composeBoxCtrl', composeBoxCtrl);
 
-  /** @ngInject */
-  function composeBoxCtrl(subject, to, text) {
-    var vm = this;
-    vm.subject = subject;
-    vm.to = to;
-    vm.text = text;
-  }
+    /** @ngInject */
+    function composeBoxCtrl(subject, to, text) {
+        var vm = this;
+        vm.subject = subject;
+        vm.to = to;
+        vm.text = text;
+    }
 })();

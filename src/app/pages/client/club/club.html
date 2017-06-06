@@ -1,0 +1,88 @@
+<div class="widgets">
+    <div class="row">
+        <div class="col-md-12">
+            <div ba-panel ba-panel-class="with-scroll">
+                <div class="operate-container">
+                    <button type="button" class="btn btn-with-icon"
+                            ng-click="open('app/pages/client/customer/modal.html','side-modal','')"><i
+                            class="ion-plus-round"></i>新增
+                    </button>
+                    <button type="button" class="btn btn-with-icon"><i class="ion-minus-round"></i>删除</button>
+                    <button type="button" class="btn btn-with-icon"><i class="ion-android-download"></i>导入</button>
+                    <button type="button" class="btn btn-with-icon"><i class="ion-android-upload"></i>导出</button>
+                    <button type="button" class="btn btn-with-icon"><i class="ion-arrow-return-left"></i>转为新客户</button>
+                    <button type="button" class="btn btn-with-icon"><i class="ion-plus-circled"></i>返回公海</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div ba-panel ba-panel-class="with-scroll">
+                <div class="horizontal-scroll">
+                    <div class="form-group  ">
+                        <label>客户来源
+                            <select class="form-control selectpicker show-tick" title="页数" selectpicker
+                                    ng-model="smartTablePageSize" ng-options="i for i in [5,10,15,20,25]">
+                            </select>
+                        </label>
+                         <label>客户名称
+                            <input class="form-control selectpicker show-tick" title="页数" selectpicker/>
+                            </input>
+                        </label>
+                    </div>
+                    <table st-table="rowCollection" class="table table-striped checkbox-table">
+                        <thead>
+                        <tr>
+                            <th>
+                                <div class="checkbox">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox">
+                                        <span>全选</span>
+                                    </label>
+                                </div>
+                            </th>
+                            <th st-sort="firstName">客户名称</th>
+                            <th st-sort="lastName">联系人</th>
+                            <th st-sort="birthDate">职务</th>
+                            <th st-sort="balance">联系方式</th>
+                            <th>客户来源</th>
+                            <th>创建人</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="row in rowCollection">
+                            <td cb-select="row"></td>
+                            <td>{{row.firstName | uppercase}}</td>
+                            <td>{{row.lastName}}</td>
+                            <td>{{row.birthDate | date}}</td>
+                            <td>{{row.balance | currency}}</td>
+                            <td>{{row.email}}</td>
+                            <td>{{row.maker }}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <nav aria-label="Page navigation">
+                      <ul class="pagination">
+                        <li>
+                          <a href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                          </a>
+                        </li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li>
+                          <a href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
