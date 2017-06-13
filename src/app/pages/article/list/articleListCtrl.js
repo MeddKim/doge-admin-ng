@@ -11,7 +11,7 @@
     /** @ngInject */
     function ArticleListCtrl($stateParams) {
         var vm = this;
-
+        
     }
 
 })();

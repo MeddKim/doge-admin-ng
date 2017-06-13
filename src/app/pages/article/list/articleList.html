@@ -10,24 +10,52 @@
 						<a href="#">垃圾箱</a> 
                 	</p>    
                 </div>
+                <div >
+                    <div class="col-sm-2" style="margin-left: -15px">
+                        <div class="input-group">
+                             <select name="" id="" class="form-control with-danger-addon">
+                                <option value="1">==批量操作==</option>
+                                <option value="1">删除</option>
+                            </select>
+                            <span class="input-group-btn">
+                                <button class="btn btn-primary">应用</button>
+                            </span>                       
+                        </div>
+                    </div>
+                    <div class="col-sm-1">
+                        <select name="" id="" class="form-control with-danger-addon">
+                                <option value="1">==批量操作==</option>
+                                <option value="1">删除</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-2" style="margin-left: -30px">
+                        <div class="input-group">
+<!--                              <select name="" id="" class="form-control with-danger-addon">
+                                <option value="1">==批量操作==</option>
+                                <option value="1">删除</option>
+                            </select>
+                            <select name="" id="" class="form-control with-danger-addon">
+                                <option value="1">==批量操作==</option>
+                                <option value="1">删除</option>
+                            </select> -->
+                            <select name="" id="" class="form-control with-danger-addon">
+                                <option value="1">==批量操作==</option>
+                                <option value="1">删除</option>
+                            </select>
+                            <span class="input-group-btn">
+                                <button class="btn btn-primary">搜索</button>
+                            </span>                       
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
     <div class="row">
         <div class="col-md-12">
             <div ba-panel ba-panel-class="with-scroll">
                 <div class="horizontal-scroll">
-                    <div class="form-group  ">
-                        <label>客户来源
-                            <select class="form-control selectpicker show-tick" title="页数" selectpicker
-                                    ng-model="smartTablePageSize" ng-options="i for i in [5,10,15,20,25]">
-                            </select>
-                        </label>
-                         <label>客户名称
-                            <input class="form-control selectpicker show-tick" title="页数" selectpicker/>
-                            </input>
-                        </label>
-                    </div>
                     <table st-table="rowCollection" class="table table-striped checkbox-table">
                         <thead>
                         <tr>
@@ -39,12 +67,13 @@
                                     </label>
                                 </div>
                             </th>
-                            <th st-sort="firstName">客户名称</th>
-                            <th st-sort="lastName">联系人</th>
-                            <th st-sort="birthDate">职务</th>
-                            <th st-sort="balance">联系方式</th>
-                            <th>客户来源</th>
-                            <th>创建人</th>
+                            <th st-sort="firstName">标题</th>
+                            <th st-sort="lastName">作者</th>
+                            <th st-sort="birthDate">分类</th>
+                            <th st-sort="balance">专题</th>
+                            <th>标签</th>
+                            <th>评论数</th>
+                            <th>评论数</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -55,6 +84,7 @@
                             <td>{{row.birthDate | date}}</td>
                             <td>{{row.balance | currency}}</td>
                             <td>{{row.email}}</td>
+                            <td>{{row.maker }}</td>
                             <td>{{row.maker }}</td>
                         </tr>
                         </tbody>
