@@ -33,8 +33,8 @@
             })
             .state('article.create', {
                 url: '/create',
-                templateUrl: 'app/pages/client/club/club.html',
-                controller: 'clubCtrl',
+                templateUrl: 'app/pages/article/create/create.html',
+                controller: 'ArticleCreateCtrl',
                 controllerAs: 'vm',
                 title: '撰写文章',
                 sidebarMeta: {

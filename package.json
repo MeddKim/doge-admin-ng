@@ -44,5 +44,8 @@
   },
   "scripts": {
     "postinstall": "bower install"
+  },
+  "dependencies": {
+    "simplemde": "^1.11.2"
   }
 }

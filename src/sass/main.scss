@@ -2,3 +2,30 @@
 
 // injector
 // endinjector
+
+
+doge-checkbox{
+	opacity:0;
+	line-height:normal;
+	box-sizing:border-box;
+	padding:0
+}
+
+.dg-article-tr{
+	height:82px;
+}
+.dg-article-tr td:nth-child(2){
+	width:20%;
+} 
+.dg-article-tr div{
+	display:none;
+}
+
+.dg-article-tr:hover div{
+	display:block;
+}
+
+
+.dg-container label{
+	font-weight:normal;
+}

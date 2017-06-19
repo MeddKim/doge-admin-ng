@@ -51,7 +51,7 @@
             </div>
         </div>
     </div>
-
+    
     <div class="row">
         <div class="col-md-12">
             <div ba-panel ba-panel-class="with-scroll">
@@ -60,12 +60,7 @@
                         <thead>
                         <tr>
                             <th>
-                                <div class="checkbox">
-                                    <label class="custom-checkbox">
-                                        <input type="checkbox">
-                                        <span>全选</span>
-                                    </label>
-                                </div>
+                                <input type="checkbox" class="doge-checkbox ">
                             </th>
                             <th st-sort="firstName">标题</th>
                             <th st-sort="lastName">作者</th>
@@ -73,19 +68,29 @@
                             <th st-sort="balance">专题</th>
                             <th>标签</th>
                             <th>评论数</th>
-                            <th>评论数</th>
+                            <th>发布时间</th>
                         </tr>
                         </thead>
                         <tbody>
-                        <tr ng-repeat="row in rowCollection">
-                            <td cb-select="row"></td>
-                            <td>{{row.firstName | uppercase}}</td>
-                            <td>{{row.lastName}}</td>
-                            <td>{{row.birthDate | date}}</td>
-                            <td>{{row.balance | currency}}</td>
-                            <td>{{row.email}}</td>
-                            <td>{{row.maker }}</td>
-                            <td>{{row.maker }}</td>
+                        <tr ng-repeat="row in vm.rowCollection" class="dg-article-tr" >
+                            <td><input type="checkbox"></td>
+                            <td >
+                                <a href="">{{row.title}}</a>
+                                <div >
+                                    <p>
+                                        <a href="#">编辑</a> |
+                                        <a href="#">草稿</a> |
+                                        <a href="#">垃圾箱</a> |
+                                        <a href="#">查看</a> 
+                                    </p>                                    
+                                </div>
+                            </td>
+                            <td>{{row.author}}</td>
+                            <td>{{row.type}}</td>
+                            <td>{{row.seminar}}</td>
+                            <td>{{row.tags}}</td>
+                            <td>{{row.contents }}</td>
+                            <td>{{row.publishTime }}</td>
                         </tr>
                         </tbody>
                     </table>

@@ -1,6 +1,6 @@
 (function () {
     'use strict';
-    angular.module('JamXin.pages.clients')
+    angular.module('Doge.pages.clients')
         // .service('customerService', customerService)
         // .service('clueService', clueService)
         .service('articleService', articleService);
@@ -11,7 +11,7 @@
     // clueService.$inject = ['$http', '$q'];
     articleService.$inject = ['$http', '$q'];
 
-    function customerService($http, $q) {
+    function articleService($http, $q) {
         var customerService = {
             customerList: customerList,
         };
